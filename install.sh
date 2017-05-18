@@ -10,5 +10,3 @@ if [ $IMPORTED == "F" ]; then
 	echo "source $CURRENT_DIR/$TO_ADD_FILE" >> ~/.bashrc
 	echo "hotgit.sh added to ~/.bashrc"
 fi
-
-source ~/.bashrc

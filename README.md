@@ -2,13 +2,13 @@ My shortten git command list.
 
 tested on mac.
 
-- config
-open ```config.sh``` and modify informations to fit yours.
+## config
+open `config.sh` and modify informations to fit yours.
 
-- install
-execute file ```./install.sh```
+## install
+just once execute file `./install.sh` and `source ~/.bashrc`.
 
-- command examples
+## command examples
 move your project.
 ```
 cd /path/your/project
