@@ -2,11 +2,11 @@
 
 INIT_FILE="~/.bashrc"
 TO_ADD_FILE="hotgit.sh"
-CURRENT_DIR=`pwd`
+DIR_OF_THIS_SCRIPT="$(cd "$(dirname -- "${BASH_SOURCE}")"; echo "$(pwd)")"
 
 IMPORTED=`grep -q "$TO_ADD_FILE" ~/.bashrc && echo T || echo F`
 
 if [ $IMPORTED == "F" ]; then
-	echo "source $CURRENT_DIR/$TO_ADD_FILE" >> ~/.bashrc
+	echo "source $DIR_OF_THIS_SCRIPT/$TO_ADD_FILE" >> ~/.bashrc
 	echo "hotgit.sh added to ~/.bashrc"
 fi

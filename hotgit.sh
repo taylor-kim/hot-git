@@ -1,6 +1,7 @@
 #!/bin/bash
 
-source ./config.sh
+DIR_OF_THIS_SCRIPT="$(cd "$(dirname -- "${BASH_SOURCE}")"; echo "$(pwd)")"
+source $DIR_OF_THIS_SCRIPT/config.sh
 
 pull() {
 	git branch | grep '*' | awk '{ print $2 }' | xargs git pull origin
