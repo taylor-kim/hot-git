@@ -104,3 +104,20 @@ gba() {
 	git branch -a
 }
 
+cb() {
+	git branch | grep "*" | awk '{ print $2 }' | xargs echo -n | pbcopy
+}
+
+cmd_all() {
+	for project in $REPOS
+        do
+                printf "===== $project =======\n\n"
+		
+		arg=$1
+
+		sh -c "cd $REPOS_HOME/$project && $arg"
+
+
+                printf "\n\n========================================\n\n"
+        done
+}
